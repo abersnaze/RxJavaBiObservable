@@ -14,7 +14,7 @@ public class OperatorBiMap<R, T0, T1> implements BiOperator<R, T0, T1> {
 	}
 
 	@Override
-    public BiSubscriber<? super T0, ? super T1> wrapDualToSingle(final Subscriber<? super R> child) {
+    public BiSubscriber<? super T0, ? super T1> call(final Subscriber<? super R> child) {
         return new BiSubscriber<T0, T1>(child) {
 
             @Override

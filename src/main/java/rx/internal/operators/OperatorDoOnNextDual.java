@@ -66,7 +66,7 @@ public class OperatorDoOnNextDual<T0, T1> implements DualOperator<T0, T1, T0, T1
 	}
 
 	@Override
-    public DualSubscriber<? super T0, ? super T1> wrapDual(final DualSubscriber<? super T0, ? super T1> child) {
+    public DualSubscriber<? super T0, ? super T1> call(final DualSubscriber<? super T0, ? super T1> child) {
 		subscriber.setChild(child);
 		return subscriber;
     }

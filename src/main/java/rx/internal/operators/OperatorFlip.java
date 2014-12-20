@@ -5,7 +5,7 @@ import rx.BiObservable.DualOperator;
 
 public class OperatorFlip<T0, T1> implements DualOperator<T1, T0, T0, T1> {
     @Override
-    public DualSubscriber<T0, T1> wrapDual(final DualSubscriber<? super T1, ? super T0> child) {
+    public DualSubscriber<T0, T1> call(final DualSubscriber<? super T1, ? super T0> child) {
         return new DualSubscriber<T0, T1>(child) {
             @Override
             public void onNext(T0 t0, T1 t1) {

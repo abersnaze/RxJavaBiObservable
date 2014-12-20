@@ -15,7 +15,7 @@ public class OperatorScan1<T0, T1, R> implements DualOperator<R, T1, T0, T1> {
 	}
 
 	@Override
-	public DualSubscriber<? super T0, ? super T1> wrapDual(DualSubscriber<? super R, ? super T1> child) {
+	public DualSubscriber<? super T0, ? super T1> call(DualSubscriber<? super R, ? super T1> child) {
 		return new DualSubscriber<T0, T1>(child) {
 			R accum = seed;
 			@Override

@@ -6,7 +6,7 @@ import rx.BiObservable.DualOperator;
 public class OperatorTakeLast2<T0, T1> implements DualOperator<T0, T1, T0, T1> {
 
 	@Override
-	public DualSubscriber<? super T0, ? super T1> wrapDual(DualSubscriber<? super T0, ? super T1> child) {
+	public DualSubscriber<? super T0, ? super T1> call(DualSubscriber<? super T0, ? super T1> child) {
 		return new DualSubscriber<T0, T1>() {
 			T0 lastT0;
 			T1 lastT1;

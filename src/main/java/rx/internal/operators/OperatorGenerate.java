@@ -14,7 +14,7 @@ public class OperatorGenerate<T0, T1> implements SingleToDualOperator<T0, T1, T0
 	}
 
 	@Override
-	public Subscriber<T0> wrapSingleToDual(final DualSubscriber<? super T0, ? super T1> child) {
+	public Subscriber<T0> call(final DualSubscriber<? super T0, ? super T1> child) {
 		return new Subscriber<T0>() {
             @Override
             public void onCompleted() {

@@ -67,7 +67,7 @@ public class OperatorMapDual<R0, R1, T0, T1> implements DualOperator<R0, R1, T0,
 	}
 
 	@Override
-    public DualSubscriber<? super T0, ? super T1> wrapDual(final DualSubscriber<? super R0, ? super R1> child) {
+    public DualSubscriber<? super T0, ? super T1> call(final DualSubscriber<? super R0, ? super R1> child) {
 		subscriber.setChild(child);
 		return subscriber;
     }
